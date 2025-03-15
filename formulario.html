@@ -20,66 +20,75 @@
         </header>
         <main>
             <hr>
-            <div>
+            <form action="" method="get" enctype="multipart/form-data">
                 <h2>Ingrese sus datos para ponerme en contacto con usted</h2>
-                <form action="" method="get" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Información de contacto</legend>
                     <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="ingrese su nombre por favor">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                     </div>
+                    <br>
                     <div>
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
                     </div>
+                    <br>
                     <div>
-                        <label for="contacto">Ingrese su numero telefonico</label>
-                        <input type="number" name="contacto" id="contacto" required pattern="[0-9]{10,10}" >
+                        <label for="contacto">Número telefónico:</label>
+                        <input type="tel" id="contacto" name="contacto" pattern="[0-9]{10}" required>
                     </div>
-                    <hr>
-                    <h2>Ingrese de que ciudad del area metropolitana es</h2>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos adicionales</legend>
                     <div>
-                        <select name="ciudad" id="ciudad">
-                            <option value="">Bucaramanga</option>
-                            <option value="">Giron</option>
-                            <option value="">Piedecuesta</option>
-                            <option value="">Floridablanca</option>
+                        <label for="ciudad">Ciudad:</label>
+                        <select id="ciudad" name="ciudad">
+                            <option value="Bucaramanga">Bucaramanga</option>
+                            <option value="Giron">Girón</option>
+                            <option value="Piedecuesta">Piedecuesta</option>
+                            <option value="Floridablanca">Floridablanca</option>
                         </select>
                     </div>
-                    <hr>
-                    <h2>Ingrese su genero</h2>
+                    <br>
                     <div>
-                        <label for="masculino">Masculino</label>
-                        <input type="radio" name="sexo" value="m" id="masculino">
-                        <label for="femenino">Femenino</label>
-                        <input type="radio" name="sexo" value="f" id="masculino">
+                        <label>Género:</label>
+                        <input type="radio" id="masculino" name="sexo" value="M"> <label for="masculino">Masculino</label>
+                        <input type="radio" id="femenino" name="sexo" value="F"> <label for="femenino">Femenino</label>
                     </div>
-                    <hr>
-                    <h2>Por que desea contactarse conmigo</h2>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Motivo de contacto</legend>
                     <div>
-                        <label for="trabajo">trabajo</label>
-                        <input type="checkbox" name="tema[]" id="trabajo">
+                        <label for="trabajo">Trabajo</label>
+                        <input type="checkbox" id="trabajo" name="tema[]">
                         <label for="conocer">Conocerte</label>
-                        <input type="checkbox" name="tema[]" id="conocer">
-                        <label for="diversion">Diversion</label>
-                        <input type="checkbox" name="tema[]" id="diversion">
+                        <input type="checkbox" id="conocer" name="tema[]">
+                        <label for="diversion">Diversión</label>
+                        <input type="checkbox" id="diversion" name="tema[]">
                         <label for="negocios">Negocios</label>
-                        <input type="checkbox" name="tema[]" id="negocios">
+                        <input type="checkbox" id="negocios" name="tema[]">
                     </div>
-                    <hr>
-                    <h2>Dejame un comentario</h2>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Comentario</legend>
                     <div>
-                        <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje aquí..."></textarea>
                     </div>
-                    <hr>
-                    <h2>Carga una foto tuya para conocerte</h2>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Sube una foto</legend>
                     <div>
-                        <input type="file">
+                        <input type="file" id="foto" name="foto">
                     </div>
-                    <div>
-                        <button type="submit">Envia el formulario</button>
-                    </div>
-                </form>
-            </div>
+                </fieldset>
+                <br>
+                <button type="submit">Enviar el formulario</button>
+            </form>
         </main>
     </body>
 </html>
